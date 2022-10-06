@@ -37,9 +37,10 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+var port = process.env.PORT || 1337;
 
-app.listen(3001, () => {
-  console.log(`Example app listening on port ${3001}`)
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
 })
 
 
